@@ -1,0 +1,35 @@
+@startuml
+
+rectangle "Программирование" as Programming
+
+rectangle "Императивное" as Imperative
+rectangle "Структурное " as Structural
+rectangle "Объектно-ориентированное" as OOP
+rectangle "Процедурное" as Procedural
+rectangle "Не структурное" as NotStructural
+
+rectangle "Декларативное" as Declarative
+rectangle "Функциональное" as Functional
+rectangle "Логическое" as Logical
+
+Programming --> Imperative
+Programming --> Declarative
+
+Imperative --> Structural
+Imperative --> NotStructural
+
+Structural --> Procedural
+Structural --> OOP
+Structural ..> Functional
+
+Declarative --> Functional
+Declarative --> Logical
+
+@enduml
+
+Procedural -- OOP
+OOP -- Functional
+
+@enduml
+
+
